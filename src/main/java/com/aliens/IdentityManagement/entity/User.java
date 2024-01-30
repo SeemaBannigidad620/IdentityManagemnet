@@ -7,12 +7,14 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "user")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
+public class User implements Serializable {
 
     String userName;
 
